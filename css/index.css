@@ -52,12 +52,9 @@ body {
     font-weight: 500;
     margin-left: 35px;
     transition: .3s;
+    color: pink;
 }
 
 .navbar a:hover {
     color: #00abf0;
-}
-
-.navbar a:visited {
-    color: pink;
 }
