@@ -17,10 +17,10 @@ html {
 body {
     background: var(--bg-color);
     color: var(--text-color);
-    background-color: #081b29;
+    background-color: #000000;
 }
 
-.header {
+header {
     position: fixed;
     top: 0;
     left: 70;
@@ -38,6 +38,9 @@ body {
     color: pink;
     text-decoration: none;
     font-weight: 600;
+    height: 50px;
+    width: 175px;
+    padding-top: 10px;
 }
 
 .navbar {
@@ -57,4 +60,105 @@ body {
 
 .navbar a:hover {
     color: #00abf0;
+}
+
+.home {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    color: pink;
+    padding: 0 10%;
+}
+
+.home-con {
+    color: pink;
+    max-width: 600px;
+}
+
+.home-con h1 {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.home-con h3 {
+    font-size: 30px;
+}
+
+.link {
+    position: absolute;
+    display: inline-flex;
+    justify-content: center;
+    width: 250px;
+    height: 200px;
+    background-color: black;
+    border: 2px solid pink;
+    border-radius: 8px;
+    color: pink;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 10px;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.con {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    display: inline-flex;
+    justify-content: center;
+    left: 120px;
+    margin-bottom: 130px;
+}
+
+.home-con p {
+    font-size: 15px;
+    margin: 20px 0 40px;
+}
+
+.home-con .btn-box {
+    display: flex;
+    justify-content: space-between;
+    width: 345px;
+    height: 50px;
+}
+
+.btn-box a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background-color: black;
+    border: 2px solid pink;
+    border-radius: 8px;
+    font-size: 19px;
+    color: pink;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.btn-box a:hover {
+    color: black;
+}
+
+.btn-box a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    z-index: -1;
+    transition: .5s;
+    background: pink;
+}
+
+.btn-box a:hover::before {
+    width: 100%;
 }
