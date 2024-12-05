@@ -171,6 +171,12 @@
     
     @media only screen and (max-width: 600px) {
         .spacer {
-            height: 370px;
+            height: 420px;
+        }
+    }
+    
+    @media only screen and (max-width: 600px) {
+        .spacer-1 {
+            height: 70px;
         }
     }
