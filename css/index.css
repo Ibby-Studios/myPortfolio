@@ -174,10 +174,54 @@
     }
     
     @media only screen and (max-width: 600px) {
+        .home-con h1 {
+            list-style: none;
+            font-size: 30px;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        .home-con h3 {
+            list-style: none;
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 1.2;
+        }
         .spacer {
-            height: 420px;
+            height: 330px;
         }
         .spacer-1 {
-            height: 480px;
+            height: 350px;
+        }
+        .spacer-2 {
+            height: 20px;
+        }
+        .spacer-3 {
+            height: 30px;
+        }
+        .logo {
+            padding-right: 30px;
+        }
+        .header {
+            position: fixed;
+            top: 0;
+            left: 70;
+            width: 100%;
+            padding: 20px 10%;
+            background: #000000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+        }
+        .navbar {
+            font-size: 12px;
+            color: pink;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .home-con p {
+            font-size: 13px;
+            margin: 20px 0 40px;
+            padding-right: 30px;
         }
     }
