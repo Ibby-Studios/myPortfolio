@@ -21,6 +21,10 @@
         box-sizing: border-box;
     }
     
+    .spacer-1 {
+        height: 200px;
+    }
+    
     .spacer {
         height: 250px;
     }
@@ -173,10 +177,7 @@
         .spacer {
             height: 420px;
         }
-    }
-    
-    @media only screen and (max-width: 600px) {
         .spacer-1 {
-            height: 70px;
+            height: 480px;
         }
     }
