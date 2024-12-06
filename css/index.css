@@ -280,7 +280,7 @@
         }
     }
     
-    @media only screen and (width: 360px) and (height: 772px) and (-webkit-device-pixel-ratio: 2) {
+    @media only screen and (width: 384px) and (height: 824px) and (-webkit-device-pixel-ratio: 2) {
         .home-con h1 {
             list-style: none;
             font-size: 30px;
