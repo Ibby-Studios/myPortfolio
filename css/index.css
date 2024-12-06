@@ -29,6 +29,14 @@
         height: 250px;
     }
     
+    .spacer-2 {
+        height: 0px;
+    }
+    
+    .spacer-3 {
+        height: 0px;
+    }
+    
     .header {
         position: fixed;
         top: 0;
@@ -173,7 +181,7 @@
         width: 100%;
     }
     
-    @media screen and (max-width: 480px) {
+    @media screen and (max-width: 1000px) {
         .home-con h1 {
             list-style: none;
             font-size: 30px;
