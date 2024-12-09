@@ -21,12 +21,12 @@
         box-sizing: border-box;
     }
     
-    .spacer-1 {
-        height: 200px;
+    .spacer {
+        height: 520px;
     }
     
-    .spacer {
-        height: 250px;
+    .spacer-1 {
+        height: 200px;
     }
     
     .header {
@@ -114,12 +114,41 @@
     
     .con {
         position: relative;
-        display: block;
+        display: flex;
         text-decoration: none;
         display: inline-flex;
         justify-content: center;
         left: 120px;
         margin-bottom: 130px;
+    }
+    
+    .gm-pic {
+        display: flex;
+    }
+    
+    .con-img {
+        position: relative;
+        display: block;
+        text-decoration: none;
+        display: inline-flex;
+        justify-content: center;
+        margin-bottom: 130px;
+    }
+    
+    .link-1 {
+        display: inline-flex;
+        justify-content: center;
+        width: 250px;
+        height: 200px;
+        background-color: black;
+        border: 2px solid pink;
+        border-radius: 8px;
+        color: pink;
+        text-decoration: none;
+        font-weight: 600;
+        letter-spacing: 10px;
+        z-index: 1;
+        overflow: hidden;
     }
     
     .home-con p {
@@ -187,7 +216,7 @@
             line-height: 1.2;
         }
         .spacer {
-            height: 300px;
+            height: 1150px;
         }
         .spacer-1 {
             height: 350px;
@@ -224,6 +253,32 @@
             margin: 20px 0 40px;
             padding-right: 30px;
         }
+        .gm-pic {
+            display: flex;
+            clear: left;
+        }
+        .con-img {
+            position: relative;
+            display: block;
+            text-decoration: none;
+            justify-content: center;
+            margin-bottom: 130px;
+        }
+        .link-1 {
+            display: inline-flex;
+            justify-content: center;
+            width: 345px;
+            height: 245px;
+            background-color: black;
+            border: 2px solid pink;
+            border-radius: 8px;
+            color: pink;
+            text-decoration: none;
+            font-weight: 600;
+            letter-spacing: 10px;
+            z-index: 1;
+            overflow: hidden;
+        }
     }
     /* 750×1334 pixels at 326ppi */
     
@@ -241,7 +296,7 @@
             line-height: 1.2;
         }
         .spacer {
-            height: 340px;
+            height: 990px;
         }
         .spacer-1 {
             height: 350px;
@@ -278,6 +333,37 @@
             margin: 20px 0 40px;
             padding-right: 30px;
         }
+        .home-con p {
+            font-size: 13px;
+            margin: 20px 0 40px;
+            padding-right: 30px;
+        }
+        .gm-pic {
+            display: block;
+            clear: right;
+        }
+        .con-img {
+            position: relative;
+            display: block;
+            text-decoration: none;
+            justify-content: center;
+            margin-bottom: 130px;
+        }
+        .link-1 {
+            display: inline-flex;
+            justify-content: center;
+            width: 295px;
+            height: 195px;
+            background-color: black;
+            border: 2px solid pink;
+            border-radius: 8px;
+            color: pink;
+            text-decoration: none;
+            font-weight: 600;
+            letter-spacing: 10px;
+            z-index: 1;
+            overflow: hidden;
+        }
     }
     
     @media only screen and (width: 384px) and (height: 854px) and (-webkit-device-pixel-ratio: 2) {
@@ -294,7 +380,7 @@
             line-height: 1.2;
         }
         .spacer {
-            height: 300px;
+            height: 960px;
         }
         .spacer-1 {
             height: 310px;
@@ -330,5 +416,20 @@
             font-size: 13px;
             margin: 20px 0 40px;
             padding-right: 30px;
+        }
+        .link-1 {
+            display: inline-flex;
+            justify-content: center;
+            width: 295px;
+            height: 195px;
+            background-color: black;
+            border: 2px solid pink;
+            border-radius: 8px;
+            color: pink;
+            text-decoration: none;
+            font-weight: 600;
+            letter-spacing: 10px;
+            z-index: 1;
+            overflow: hidden;
         }
     }
