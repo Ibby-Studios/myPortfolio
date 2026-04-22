@@ -189,7 +189,8 @@
     .hero {
       position: relative;
       overflow: hidden;
-      min-height: calc(100vh - 76px);
+      min-height: auto;
+    padding-top: 20px; /* small controlled spacing */
       display: flex;
       align-items: center;
     }
@@ -496,6 +497,13 @@
 
       .hero-grid {
         gap: 34px;
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: 1.05fr 0.95fr;
+        gap: 56px;
+        align-items: center;
+        padding: 0 0 56px; /* remove top space */
       }
 
       .hero-card {
@@ -622,11 +630,12 @@
       <div class="container hero-grid">
         <div>
           <div class="eyebrow">Designer • Developer • Creative</div>
-          <h2>Black, pink, bold, and fully <span>you</span>.</h2>
+          <h2>We design and build <span>bold digital experiences</span>.</h2>
+
           <p class="hero-copy">
-            This homepage is made to feel stronger, cleaner, and more personal. It keeps the dark style,
-            adds pink highlights, and gives your photo a real place in the hero so the site feels like
-            your brand instead of a generic template.
+            Ibby Studios is a creative space focused on building interactive and meaningful digital work.
+            From UX design to game development, we create experiences that combine clean design,
+            strong storytelling, and thoughtful interaction.
           </p>
           <div class="hero-actions">
             <button class="primary-btn" data-target="game">See Game</button>
