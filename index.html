@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Ibby Studios Portfolio</title>
+
   <style>
     :root {
       --pink: #FFB6C1;
@@ -54,6 +57,10 @@
       scroll-margin-top: 90px;
     }
 
+    /* =========================
+       HEADER
+    ========================== */
+
     .site-header {
       position: sticky;
       top: 0;
@@ -71,11 +78,9 @@
       padding: 16px 0;
     }
 
-    .brand h1 {
-      font-size: 1.5rem;
-      color: var(--pink);
-      font-weight: 800;
-      letter-spacing: 0.03em;
+    .brand img {
+      height: 50px;
+      object-fit: contain;
     }
 
     .brand p {
@@ -107,7 +112,11 @@
       align-items: center;
       justify-content: center;
       border-radius: 16px;
-      transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+      transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease;
     }
 
     .reach-btn,
@@ -144,6 +153,10 @@
     .card-btn:hover {
       background: rgba(255, 182, 193, 0.1);
     }
+
+    /* =========================
+       MOBILE MENU
+    ========================== */
 
     .mobile-menu-toggle {
       display: none;
@@ -186,11 +199,15 @@
       font-weight: 700;
     }
 
+    /* =========================
+       HERO
+    ========================== */
+
     .hero {
       position: relative;
       overflow: hidden;
       min-height: auto;
-    padding-top: 20px; /* small controlled spacing */
+      padding-top: 20px;
       display: flex;
       align-items: center;
     }
@@ -332,6 +349,10 @@
       color: var(--text-soft);
     }
 
+    /* =========================
+       GENERAL SECTION
+    ========================== */
+
     .section-label {
       text-transform: uppercase;
       letter-spacing: 0.35em;
@@ -347,6 +368,10 @@
     .section-head {
       margin-bottom: 36px;
     }
+
+    /* =========================
+       ABOUT
+    ========================== */
 
     .about-grid {
       display: grid;
@@ -395,6 +420,138 @@
       margin-bottom: 10px;
     }
 
+    /* =========================
+       EDUCATION
+    ========================== */
+
+    .education-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .degree-card {
+      position: relative;
+      overflow: hidden;
+      padding: 28px;
+      transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        border-color 0.25s ease;
+    }
+
+    .degree-card:hover {
+      transform: translateY(-7px);
+      border-color: rgba(255, 182, 193, 0.45);
+      background: rgba(255, 182, 193, 0.075);
+    }
+
+    .degree-card::before {
+      content: "";
+      position: absolute;
+      width: 140px;
+      height: 140px;
+      right: -60px;
+      top: -60px;
+      background: rgba(255, 182, 193, 0.08);
+      border-radius: 50%;
+      filter: blur(15px);
+      pointer-events: none;
+    }
+
+    .degree-school {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      min-height: 75px;
+      margin-bottom: 24px;
+    }
+
+    .degree-logo-container {
+      width: 72px;
+      height: 72px;
+      flex-shrink: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 18px;
+      background: white;
+      padding: 10px;
+    }
+
+    .degree-logo {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .degree-university {
+      color: var(--pink) !important;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 700;
+      line-height: 1.5;
+    }
+
+    .degree-card h3 {
+      color: white;
+      font-size: 1.45rem;
+      line-height: 1.3;
+      margin-bottom: 8px;
+    }
+
+    .degree-type {
+      color: var(--pink) !important;
+      font-weight: 700;
+      font-size: 1rem;
+      margin-bottom: 10px;
+    }
+
+    .degree-meta {
+      display: inline-block;
+      color: var(--text-faint) !important;
+      font-size: 0.88rem;
+      margin-bottom: 18px;
+    }
+
+    .degree-details {
+      color: var(--text-soft) !important;
+      line-height: 1.8;
+      font-size: 0.95rem;
+    }
+
+    .degree-badge {
+      display: inline-flex;
+      margin-top: 18px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 182, 193, 0.3);
+      background: rgba(255, 182, 193, 0.08);
+      color: var(--pink);
+      font-size: 0.78rem;
+      font-weight: 700;
+    }
+
+    .ivy-logo-placeholder {
+      width: 72px;
+      height: 72px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 18px;
+      border: 1px solid rgba(255, 182, 193, 0.25);
+      background: rgba(255, 182, 193, 0.08);
+      color: var(--pink);
+      font-size: 1.3rem;
+      font-weight: 800;
+    }
+
+    /* =========================
+       PROJECTS / SCHOOL
+    ========================== */
+
     .grid-2,
     .school-grid {
       display: grid;
@@ -408,7 +565,10 @@
     }
 
     .project-card {
-      transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+      transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        border-color 0.2s ease;
     }
 
     .project-card:hover {
@@ -421,8 +581,14 @@
       height: 220px;
       border-radius: 24px;
       border: 1px solid rgba(255, 182, 193, 0.12);
-      background: linear-gradient(135deg, rgba(255, 182, 193, 0.3), rgba(255, 182, 193, 0.08), #000);
+      background: linear-gradient(
+        135deg,
+        rgba(255, 182, 193, 0.3),
+        rgba(255, 182, 193, 0.08),
+        #000
+      );
       margin-bottom: 20px;
+      overflow: hidden;
     }
 
     .project-card h3,
@@ -433,7 +599,7 @@
     }
 
     .project-meta {
-      color: rgba(255, 182, 193, 0.88);
+      color: rgba(255, 182, 193, 0.88) !important;
       font-size: 0.92rem;
       font-weight: 600;
       margin-bottom: 10px;
@@ -453,10 +619,18 @@
       margin-bottom: 16px;
     }
 
+    /* =========================
+       CONTACT
+    ========================== */
+
     .contact-card {
       padding: 34px 24px;
       text-align: center;
-      background: linear-gradient(135deg, rgba(255, 182, 193, 0.14), rgba(255, 255, 255, 0.04));
+      background: linear-gradient(
+        135deg,
+        rgba(255, 182, 193, 0.14),
+        rgba(255, 255, 255, 0.04)
+      );
     }
 
     .contact-text {
@@ -468,13 +642,18 @@
 
     .contact-btn {
       display: inline-flex;
-      margin-top: 24px;
+      margin: 24px 6px 0;
       padding: 14px 22px;
       border-radius: 16px;
       background: var(--pink);
       color: black;
       font-weight: 700;
+      transition: transform 0.2s ease;
     }
+
+    /* =========================
+       TABLET
+    ========================== */
 
     @media (max-width: 960px) {
       .nav-links,
@@ -495,6 +674,10 @@
         grid-template-columns: 1fr;
       }
 
+      .education-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
       .hero-grid {
         gap: 34px;
       }
@@ -504,6 +687,10 @@
         margin: 0 auto;
       }
     }
+
+    /* =========================
+       MOBILE
+    ========================== */
 
     @media (max-width: 640px) {
       .container {
@@ -518,8 +705,8 @@
         padding: 14px 0;
       }
 
-      .brand h1 {
-        font-size: 1.15rem;
+      .brand img {
+        height: 42px;
       }
 
       .brand p {
@@ -563,7 +750,8 @@
       .project-card,
       .school-card,
       .mini-card,
-      .contact-card {
+      .contact-card,
+      .degree-card {
         border-radius: 24px;
         padding: 20px;
       }
@@ -577,282 +765,899 @@
       .project-card h3 {
         font-size: 1.25rem;
       }
+
+      .education-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .degree-school {
+        min-height: auto;
+      }
+
+      .degree-logo-container,
+      .ivy-logo-placeholder {
+        width: 62px;
+        height: 62px;
+      }
+
+      .degree-card h3 {
+        font-size: 1.3rem;
+      }
     }
   </style>
 </head>
+
 <body>
+
+  <!-- =========================
+       HEADER
+  ========================== -->
+
   <header class="site-header">
     <div class="container">
+
       <div class="header-inner">
+
         <div class="brand">
-          <!-- <h1>Ibby Studios</h1> -->
-          <img src="./imgs/d0a29227-3255-4af4-aae2-a40875b678e5.png" alt="Ibby Studios" style="height:50px;object-fit:contain;" />
+          <img
+            src="./imgs/d0a29227-3255-4af4-aae2-a40875b678e5.png"
+            alt="Ibby Studios"
+          />
           <p>&nbsp;Portfolio</p>
         </div>
 
         <nav class="nav-links">
           <button data-target="home">Home</button>
           <button data-target="about">About</button>
+          <button data-target="education">Education</button>
           <button data-target="game">Games</button>
           <button data-target="school">School Projects</button>
-          <!-- <button data-target="contact">Contact</button> -->
         </nav>
 
         <div class="desktop-reach">
-          <button class="reach-btn" data-target="contact">Contact</button>
+          <button class="reach-btn" data-target="contact">
+            Contact
+          </button>
         </div>
 
-        <button class="mobile-menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
+        <button
+          class="mobile-menu-toggle"
+          id="menuToggle"
+          aria-label="Toggle menu"
+        >
+          ☰
+        </button>
+
       </div>
 
       <div class="mobile-menu" id="mobileMenu">
+
         <div class="mobile-menu-inner">
           <button data-target="home">Home</button>
           <button data-target="about">About</button>
+          <button data-target="education">Education</button>
           <button data-target="game">Games</button>
           <button data-target="school">School Projects</button>
           <button data-target="contact">Contact</button>
         </div>
+
       </div>
     </div>
   </header>
 
+
   <main>
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
     <section id="home" class="hero section">
+
       <div class="glow glow-left"></div>
       <div class="glow glow-right"></div>
+
       <div class="container hero-grid">
+
         <div>
-          <div class="eyebrow">Designer • Developer • Creative</div>
-          <h2>We design and build <span>bold digital experiences</span>.</h2>
+
+          <div class="eyebrow">
+            Designer • Developer • Creative
+          </div>
+
+          <h2>
+            We design and build
+            <span>bold digital experiences</span>.
+          </h2>
 
           <p class="hero-copy">
-            Ibby Studios is a creative space focused on building interactive and meaningful digital work.
-            From UX design to game development, we create experiences that combine clean design,
-            strong storytelling, and thoughtful interaction.
+            Ibby Studios is a creative space focused on building
+            interactive and meaningful digital work. From UX design
+            to game development, we create experiences that combine
+            clean design, strong storytelling, and thoughtful
+            interaction.
           </p>
+
           <div class="hero-actions">
-            <button class="primary-btn" data-target="game">See Games</button>
-            <button class="secondary-btn" data-target="about">About Me</button>
+
+            <button
+              class="primary-btn"
+              data-target="game"
+            >
+              See Games
+            </button>
+
+            <button
+              class="secondary-btn"
+              data-target="about"
+            >
+              About Me
+            </button>
+
           </div>
         </div>
+
 
         <div class="hero-card">
+
           <div class="hero-card-glow"></div>
+
           <div class="hero-card-inner">
-            <img src="./imgs/top100.jpeg" alt="Ibrahim portrait" />
+
+            <img
+              src="./imgs/top100.jpeg"
+              alt="Ibrahim AlAntary"
+            />
+
             <div class="hero-info">
-              <p class="welcome">Welcome</p>
-              <h3>I’m Ibrahim AlAntary</h3>
-              <p>
-                I build digital experiences that mix creativity, storytelling, design, and interaction
-                in a way that feels modern and memorable.
+
+              <p class="welcome">
+                Welcome
               </p>
+
+              <h3>
+                I’m Ibrahim AlAntary
+              </h3>
+
+              <p>
+                I build digital experiences that mix creativity,
+                storytelling, design, and interaction in a way that
+                feels modern and memorable.
+              </p>
+
             </div>
           </div>
         </div>
+
       </div>
     </section>
+
+
+    <!-- =========================
+         ABOUT
+    ========================== -->
 
     <section id="about" class="section">
+
       <div class="container">
+
         <div class="section-head">
-          <p class="section-label">About</p>
-          <h2 class="section-title">Who I am</h2>
+
+          <p class="section-label">
+            About
+          </p>
+
+          <h2 class="section-title">
+            Who I am
+          </h2>
+
         </div>
+
 
         <div class="about-grid">
+
           <div class="card">
+
             <p class="section-text">
-              I’m a creative designer and developer who cares about making experiences feel good, look
-              clean, and leave an impression. My work blends interface design, interactive thinking,
-              visual storytelling, and personality so every project feels intentional.
+              I’m a creative designer and developer who cares about
+              making experiences feel good, look clean, and leave an
+              impression. My work blends interface design, interactive
+              thinking, visual storytelling, and personality so every
+              project feels intentional.
             </p>
+
             <p class="section-text">
-              I like building things that feel bold and expressive, especially when they combine clean
-              structure with a little attitude. This site keeps that same energy with a dark aesthetic,
-              pink accents, and sections that show both my work and my personality.
+              I like building things that feel bold and expressive,
+              especially when they combine clean structure with a little
+              attitude. This site keeps that same energy with a dark
+              aesthetic, pink accents, and sections that show both my
+              work and my personality.
             </p>
+
           </div>
+
 
           <div class="mini-stack">
+
             <div class="mini-card highlight">
-              <h3>Focus</h3>
-              <p>UI/UX, creative development, game ideas, and digital storytelling.</p>
+
+              <h3>
+                Focus
+              </h3>
+
+              <p>
+                UI/UX, creative development, game ideas,
+                and digital storytelling.
+              </p>
+
             </div>
+
+
             <div class="mini-card">
-              <h3>Style</h3>
-              <p>Minimal, dark, high contrast, expressive, and personality-driven.</p>
+
+              <h3>
+                Style
+              </h3>
+
+              <p>
+                Minimal, dark, high contrast, expressive,
+                and personality-driven.
+              </p>
+
             </div>
+
           </div>
         </div>
       </div>
     </section>
 
-    <section id="game" class="section">
+
+    <!-- =========================
+         EDUCATION
+    ========================== -->
+
+    <section id="education" class="section">
+
       <div class="container">
+
         <div class="section-head">
-          <p class="section-label">Game</p>
-          <h2 class="section-title">Games I’m building</h2>
+
+          <p class="section-label">
+            Education
+          </p>
+
+          <h2 class="section-title">
+            My Academic Journey
+          </h2>
+
         </div>
+
+
+        <div class="education-grid">
+
+          <!-- MASTER'S DEGREE -->
+
+          <article class="card degree-card">
+
+            <div class="degree-school">
+
+              <div class="degree-logo-container">
+
+                <img
+                  src="./imgs/iu-logo.png"
+                  alt="Indiana University Logo"
+                  class="degree-logo"
+                />
+
+              </div>
+
+              <p class="degree-university">
+                Indiana University Indianapolis
+              </p>
+
+            </div>
+
+
+            <h3>
+              Master of Science
+            </h3>
+
+            <p class="degree-type">
+              Human-Computer Interaction
+            </p>
+
+            <p class="degree-meta">
+              Currently Pursuing
+            </p>
+
+            <p class="degree-details">
+              Advanced study in human-centered design, user experience,
+              interaction design, usability research, interface design,
+              and the relationship between people and technology.
+            </p>
+
+            <span class="degree-badge">
+              M.S. Human-Computer Interaction
+            </span>
+
+          </article>
+
+
+          <!-- BACHELOR'S DEGREE -->
+
+          <article class="card degree-card">
+
+            <div class="degree-school">
+
+              <div class="degree-logo-container">
+
+                <img
+                  src="./imgs/iu-logo.png"
+                  alt="Indiana University Logo"
+                  class="degree-logo"
+                />
+
+              </div>
+
+              <p class="degree-university">
+                Indiana University Indianapolis
+              </p>
+
+            </div>
+
+
+            <h3>
+              Bachelor of Science
+            </h3>
+
+            <p class="degree-type">
+              Informatics
+            </p>
+
+            <p class="degree-meta">
+              Graduated December 2023
+            </p>
+
+            <p class="degree-details">
+              Studied informatics, user experience, programming,
+              interactive media, and technology. Completed minors in
+              Game Design & Development and Classical Studies.
+            </p>
+
+            <span class="degree-badge">
+              B.S. Informatics
+            </span>
+
+          </article>
+
+
+          <!-- ASSOCIATE DEGREE -->
+
+          <article class="card degree-card">
+
+            <div class="degree-school">
+
+              <div class="degree-logo-container">
+
+                <img
+                  src="./imgs/ivy-logo.png"
+                  alt="Indiana University Logo"
+                  class="degree-logo"
+                />
+
+              </div>
+
+              <p class="degree-university">
+                Ivy Tech Community College
+              </p>
+
+            </div>
+
+
+            <h3>
+              Associate of Applied Science
+            </h3>
+
+            <p class="degree-type">
+              Software Development
+            </p>
+
+            <p class="degree-meta">
+              Graduated May 2021
+            </p>
+
+            <p class="degree-details">
+              Studied software development, object-oriented programming,
+              databases, application development, programming
+              fundamentals, and software problem-solving.
+            </p>
+
+            <span class="degree-badge">
+              A.A.S. Software Development
+            </span>
+
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =========================
+         GAMES
+    ========================== -->
+
+    <section id="game" class="section">
+
+      <div class="container">
+
+        <div class="section-head">
+
+          <p class="section-label">
+            Game
+          </p>
+
+          <h2 class="section-title">
+            Games I’m building
+          </h2>
+
+        </div>
+
 
         <div class="grid-2">
-          <article class="card project-card">
-            <div class="project-thumb">
-                <img src="./imgs/Ibby Studiøs.png" alt="Game preview" style="width:100%;height:100%;object-fit:cover;border-radius:24px;" />
-            </div>
-            <h3>2D Private Project</h3>
-            <p class="project-meta">Fall 2025 • Genre: Souls-like</p>
-            <p>
-              In this quirky 2D Souls-like, you play as The Peacemaker, a reluctant hero trying to unite
-              divided kingdoms in a chaotic world full of conflict and absurdity.
-            </p>
-            <button class="card-btn" type="button">Private Project</button>
-          </article>
+
+          <!-- GAME 1 -->
 
           <article class="card project-card">
+
             <div class="project-thumb">
-                <img src="./imgs/Blue Wood.png" alt="Game preview" style="width:100%;height:100%;object-fit:cover;border-radius:24px;" />
+
+              <img
+                src="./imgs/Ibby Studiøs.png"
+                alt="2D Souls-like Game Preview"
+                style="
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+                  border-radius: 24px;
+                "
+              />
+
             </div>
-            <h3>Eternal Void: The broken realm</h3>
-            <p class="project-meta">In development • Genre: Horror, Puzzle</p>
-            <p>
-              A horror puzzle game set in a world consumed by illness and darkness after the death of Dr.
-              Ibbington. The project is still under development.
+
+            <h3>
+              2D Private Project
+            </h3>
+
+            <p class="project-meta">
+              Fall 2025 • Genre: Souls-like
             </p>
-            <a class="card-btn" href="https://iamibby.itch.io/eternal-void-the-broken-realm" target="_blank" rel="noreferrer">View Game</a>
+
+            <p>
+              In this quirky 2D Souls-like, you play as The Peacemaker,
+              a reluctant hero trying to unite divided kingdoms in a
+              chaotic world full of conflict and absurdity.
+            </p>
+
+            <button
+              class="card-btn"
+              type="button"
+            >
+              Private Project
+            </button>
+
           </article>
+
+
+          <!-- GAME 2 -->
+
+          <article class="card project-card">
+
+            <div class="project-thumb">
+
+              <img
+                src="./imgs/Blue Wood.png"
+                alt="Eternal Void Game Preview"
+                style="
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+                  border-radius: 24px;
+                "
+              />
+
+            </div>
+
+            <h3>
+              Eternal Void: The Broken Realm
+            </h3>
+
+            <p class="project-meta">
+              In Development • Genre: Horror, Puzzle
+            </p>
+
+            <p>
+              A horror puzzle game set in a world consumed by illness
+              and darkness after the death of Dr. Ibbington.
+              The project is still under development.
+            </p>
+
+            <a
+              class="card-btn"
+              href="https://iamibby.itch.io/eternal-void-the-broken-realm"
+              target="_blank"
+              rel="noreferrer"
+            >
+              View Game
+            </a>
+
+          </article>
+
         </div>
       </div>
     </section>
+
+
+    <!-- =========================
+         SCHOOL PROJECTS
+    ========================== -->
 
     <section id="school" class="section">
+
       <div class="container">
+
         <div class="section-head">
-          <p class="section-label">School Projects</p>
-          <h2 class="section-title">My School Work</h2>
+
+          <p class="section-label">
+            School Projects
+          </p>
+
+          <h2 class="section-title">
+            My School Work
+          </h2>
+
         </div>
+
 
         <div class="school-grid">
-            <article class="card school-card">
-                <div class="school-bar"></div>
-                <h3 class="accent-text">INFO-H 567: IoT Interface Design for Business Innovation</h3>
-                <p>
-                    Focused on designing IoT-based interfaces for business innovation, this course explored how
-                    connected devices can create meaningful user experiences. Work included user research,
-                    concept development, and prototyping systems that integrate physical and digital interactions
-                    to solve real-world problems.
-                </p>
-                <a class="card-btn" href="https://www.figma.com/make/aF4KJUOy4MsYdN17JpI9nJ/RelOS-Prototype---Team-We-Ski--Copy-?t=R8X9ueerwZbyuoNm-1" target="_blank">View Midterm Project</a>
-                <a class="card-btn" href="https://clad-lake-40402194.figma.site/" target="_blank">View Final Project</a>
-            </article>
 
-            <article class="card school-card">
-              <div class="school-bar"></div>
-              <h3 class="accent-text">INFO-H 563: Psychology of HCI</h3>
-              <p>
-                Focused on the psychology behind user behavior, this course examined how people
-                perceive, think, and interact with digital systems. Work explored concepts like
-                attention, motivation, and cognitive load, applying them to design more intuitive,
-                ethical, and human-centered experiences.
-              </p>
-              <a class="card-btn" href="./uxecs.html" target="_blank">UX Ethics Case Study</a>
-          </article>
-
-            <article class="card school-card">
-              <div class="school-bar"></div>
-              <h3 class="accent-text">HER-V 500: Visual Design for User Interface</h3>
-              <p>
-                Explored the principles behind effective interface design, 
-                with an emphasis on creating visually clear and easy-to-use digital products. 
-                Coursework focused on designing screen layouts, developing visual systems, 
-                refining typography and color choices, 
-                and creating polished interface concepts that balance aesthetics with usability.
-              </p>
-              <a class="card-btn" href="pdf/HER-V 500.pdf" target="_blank">Final Project</a>
-          </article>
-
-            <article class="card school-card">
-                <div class="school-bar"></div>
-                <h3 class="accent-text">INFO-H 541: Interaction Design Practice</h3>
-                <p>
-                    A hands-on course in interaction design focused on creating intuitive and user-centered
-                    digital experiences. Projects emphasized iterative design, usability testing, and building
-                    high-fidelity prototypes that improve how users interact with complex systems.
-                </p>
-                <a class="card-btn" href="https://www.figma.com/design/wzUrBFQEmrXVxcNmkS8qbM/IDP-Smart-Home?node-id=60795-137&t=rYKpwl6pScnJtkiS-1" target="_blank">View Midterm Project</a>
-                <a class="card-btn" href="https://www.figma.com/proto/Ht0hEng0sTWeOAwka1Xk4u/IDP-Final-Project?node-id=1-2&page-id=0%3A1&starting-point-node-id=1%3A2&t=mddylECvVm4L9rer-1" target="_blank">View Final Project</a>
-            </article>
+          <!-- H567 -->
 
           <article class="card school-card">
+
             <div class="school-bar"></div>
-            <h3 class="accent-text">NEWM-N 330: Intermediate Game Design and Development</h3>
+
+            <h3 class="accent-text">
+              INFO-H 567: IoT Interface Design for Business Innovation
+            </h3>
+
             <p>
-              Advanced HCI and UX design work including research, usability testing, and high-fidelity
-              prototypes focused on real-world interaction problems.
+              Focused on designing IoT-based interfaces for business
+              innovation, this course explored how connected devices can
+              create meaningful user experiences. Work included user
+              research, concept development, and prototyping systems that
+              integrate physical and digital interactions to solve
+              real-world problems.
             </p>
-            <a class="card-btn" href="https://github.com/IamIbrahimAhmad/DoctorWormP1" target="_blank">View Project</a>
+
+            <a
+              class="card-btn"
+              href="https://www.figma.com/make/aF4KJUOy4MsYdN17JpI9nJ/RelOS-Prototype---Team-We-Ski--Copy-?t=R8X9ueerwZbyuoNm-1"
+              target="_blank"
+              rel="noreferrer"
+            >
+              View Midterm Project
+            </a>
+
+            <a
+              class="card-btn"
+              href="https://clad-lake-40402194.figma.site/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              View Final Project
+            </a>
+
           </article>
 
-          <article class="card school-card">
-            <div class="school-bar"></div>
-            <h3 class="accent-text">NEWM-N 220: Introduction to Media Application Development</h3>
-            <p>
-              Foundational design and media projects exploring visual design, layout, and creative
-              digital storytelling concepts.
-            </p>
-            <a class="card-btn" href="https://iamibrahimahmad.github.io/n220CourseWork/" target="_blank">View Project</a>
-          </article>
+
+          <!-- H563 -->
 
           <article class="card school-card">
+
             <div class="school-bar"></div>
-            <h3 class="accent-text">SDEV 200: Software Development using Java</h3>
+
+            <h3 class="accent-text">
+              INFO-H 563: Psychology of HCI
+            </h3>
+
             <p>
-              Software development coursework focusing on programming fundamentals, problem-solving, and
-              building functional applications.
+              Focused on the psychology behind user behavior, this
+              course examined how people perceive, think, and interact
+              with digital systems. Work explored concepts like
+              attention, motivation, and cognitive load, applying them
+              to design more intuitive, ethical, and human-centered
+              experiences.
             </p>
-            <a class="card-btn" href="https://github.com/IamIbrahimAhmad/Java-Project-IBH-Bank" target="_blank">View Project</a>
+
+            <a
+              class="card-btn"
+              href="./uxecs.html"
+              target="_blank"
+            >
+              UX Ethics Case Study
+            </a>
+
           </article>
+
+
+          <!-- V500 -->
+
+          <article class="card school-card">
+
+            <div class="school-bar"></div>
+
+            <h3 class="accent-text">
+              HER-V 500: Visual Design for User Interface
+            </h3>
+
+            <p>
+              Explored the principles behind effective interface design,
+              with an emphasis on creating visually clear and easy-to-use
+              digital products. Coursework focused on designing screen
+              layouts, developing visual systems, refining typography
+              and color choices, and creating polished interface
+              concepts that balance aesthetics with usability.
+            </p>
+
+            <a
+              class="card-btn"
+              href="pdf/HER-V 500.pdf"
+              target="_blank"
+            >
+              Paper
+            </a>
+            <a
+              class="card-btn"
+              href="https://www.figma.com/proto/adeLhl44JBs5uB3vLE0tZM/Dashboard?page-id=0%3A1&node-id=87-592&p=f&viewport=624%2C-790%2C0.5&t=MIWOPwQcLrk1GkIR-1&scaling=min-zoom&content-scaling=fixed&desktop-link-click-timestamp=1789517049119&desktop-ul-exp-bucket=po/"
+              target="_blank"
+              rel="noreferrer"
+            >
+               Prototype
+            </a>
+
+
+          </article>
+
+
+          <!-- H541 -->
+
+          <article class="card school-card">
+
+            <div class="school-bar"></div>
+
+            <h3 class="accent-text">
+              INFO-H 541: Interaction Design Practice
+            </h3>
+
+            <p>
+              A hands-on course in interaction design focused on
+              creating intuitive and user-centered digital experiences.
+              Projects emphasized iterative design, usability testing,
+              and building high-fidelity prototypes that improve how
+              users interact with complex systems.
+            </p>
+
+            <a
+              class="card-btn"
+              href="https://www.figma.com/design/wzUrBFQEmrXVxcNmkS8qbM/IDP-Smart-Home?node-id=60795-137&t=rYKpwl6pScnJtkiS-1"
+              target="_blank"
+              rel="noreferrer"
+            >
+              View Midterm Project
+            </a>
+
+            <a
+              class="card-btn"
+              href="https://www.figma.com/proto/Ht0hEng0sTWeOAwka1Xk4u/IDP-Final-Project?node-id=1-2&page-id=0%3A1&starting-point-node-id=1%3A2&t=mddylECvVm4L9rer-1"
+              target="_blank"
+              rel="noreferrer"
+            >
+              View Final Project
+            </a>
+
+          </article>
+
+
+          <!-- N330 -->
+
+          <article class="card school-card">
+
+            <div class="school-bar"></div>
+
+            <h3 class="accent-text">
+              NEWM-N 330: Intermediate Game Design and Development
+            </h3>
+
+            <p>
+              Game design and development coursework focused on building
+              interactive systems, gameplay mechanics, player
+              experiences, and working with game development tools and
+              programming concepts.
+            </p>
+
+            <a
+              class="card-btn"
+              href="https://github.com/IamIbrahimAhmad/DoctorWormP1"
+              target="_blank"
+              rel="noreferrer"
+            >
+              View Project
+            </a>
+
+          </article>
+
+
+          <!-- N220 -->
+
+          <article class="card school-card">
+
+            <div class="school-bar"></div>
+
+            <h3 class="accent-text">
+              NEWM-N 220: Introduction to Media Application Development
+            </h3>
+
+            <p>
+              Foundational web and media development coursework
+              exploring programming, interactive media applications,
+              web technologies, and creative digital experiences.
+            </p>
+
+            <a
+              class="card-btn"
+              href="https://iamibrahimahmad.github.io/n220CourseWork/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              View Project
+            </a>
+
+          </article>
+
+
+          <!-- SDEV 200 -->
+
+          <article class="card school-card">
+
+            <div class="school-bar"></div>
+
+            <h3 class="accent-text">
+              SDEV 200: Software Development using Java
+            </h3>
+
+            <p>
+              Software development coursework focusing on Java,
+              object-oriented programming, programming fundamentals,
+              problem-solving, and building functional applications.
+            </p>
+
+            <a
+              class="card-btn"
+              href="https://github.com/IamIbrahimAhmad/Java-Project-IBH-Bank"
+              target="_blank"
+              rel="noreferrer"
+            >
+              View Project
+            </a>
+
+          </article>
+
         </div>
       </div>
     </section>
+
+
+    <!-- =========================
+         CONTACT
+    ========================== -->
 
     <section id="contact" class="section">
+
       <div class="container">
+
         <div class="contact-card">
-          <p class="section-label">Contact</p>
-          <h2 class="section-title">Let’s make something fire</h2>
-          <a class="contact-btn" href="mailto: i.ahmad2000@icloud.com" target="_blank">Email Me</a>
-          <a class="contact-btn" href="https://www.linkedin.com/in/iamibby/" target="_blank">LinkedIn</a>
+
+          <p class="section-label">
+            Contact
+          </p>
+
+          <h2 class="section-title">
+            Let’s make something fire
+          </h2>
+
+          <a
+            class="contact-btn"
+            href="mailto:i.ahmad2000@icloud.com"
+          >
+            Email Me
+          </a>
+
+          <a
+            class="contact-btn"
+            href="https://www.linkedin.com/in/iamibby/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            LinkedIn
+          </a>
+
         </div>
       </div>
     </section>
+
   </main>
 
+
+  <!-- =========================
+       JAVASCRIPT
+  ========================== -->
+
   <script>
-    const menuToggle = document.getElementById('menuToggle');
-    const mobileMenu = document.getElementById('mobileMenu');
+    const menuToggle =
+      document.getElementById("menuToggle");
+
+    const mobileMenu =
+      document.getElementById("mobileMenu");
+
 
     function scrollToSection(sectionId) {
-      const section = document.getElementById(sectionId);
+
+      const section =
+        document.getElementById(sectionId);
+
       if (section) {
-        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+        section.scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+
       }
     }
 
-    document.querySelectorAll('[data-target]').forEach((element) => {
-      element.addEventListener('click', () => {
-        const target = element.getAttribute('data-target');
-        scrollToSection(target);
-        mobileMenu.classList.remove('open');
-        menuToggle.textContent = '☰';
-      });
-    });
 
-    menuToggle.addEventListener('click', () => {
-      const isOpen = mobileMenu.classList.toggle('open');
-      menuToggle.textContent = isOpen ? '✕' : '☰';
+    document
+      .querySelectorAll("[data-target]")
+      .forEach((element) => {
+
+        element.addEventListener("click", () => {
+
+          const target =
+            element.getAttribute("data-target");
+
+          scrollToSection(target);
+
+          mobileMenu.classList.remove("open");
+
+          menuToggle.textContent = "☰";
+
+        });
+
+      });
+
+
+    menuToggle.addEventListener("click", () => {
+
+      const isOpen =
+        mobileMenu.classList.toggle("open");
+
+      menuToggle.textContent =
+        isOpen ? "✕" : "☰";
+
     });
   </script>
+
 </body>
+
 </html>
